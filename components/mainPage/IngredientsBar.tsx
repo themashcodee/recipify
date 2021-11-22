@@ -1,5 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
-import Ingredients from "database/ingredients.json";
+
+import { useSelector } from "react-redux";
+import { selectIngredients } from "store/ingredients";
 
 interface Props {
 	selectedIngredients: string[];
@@ -10,6 +12,8 @@ const IngredientsBar = ({
 	selectedIngredients,
 	setSelectedIngredients,
 }: Props) => {
+	const Ingredients = useSelector(selectIngredients);
+
 	return (
 		<div className="w-full h-14 rounded-lg mb-10 flex  items-center">
 			<span className="font-semibold text-lg pr-2">Ingredients</span>

@@ -7,6 +7,9 @@ import User from "components/icons/User";
 import Cancel from "components/icons/Cancel";
 import { useDispatch } from "react-redux";
 import { login } from "store/user";
+import { addRecipesInitialy } from "store/recipes";
+import { addPreferIngredientsInitialy } from "store/preferIngredients";
+import { addIngredientsInitialy } from "store/ingredients";
 import { useRouter } from "next/router";
 
 const Form = () => {
@@ -32,6 +35,9 @@ const Form = () => {
 	function submitForm(e: FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 		dispatch(login({ name, password, username, picture: image }));
+		dispatch(addRecipesInitialy());
+		dispatch(addPreferIngredientsInitialy());
+		dispatch(addIngredientsInitialy());
 		router.push("/");
 	}
 

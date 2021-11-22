@@ -1,6 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "store";
 import { User } from "types";
+import RecipesData from "database/recipes.json";
+import IngredientsData from "database/ingredients.json";
 
 export const initialState: { user: User } = {
 	user: {
@@ -25,9 +27,19 @@ export const userSlice = createSlice({
 	reducers: {
 		login: (state, action: PayloadAction<User>) => {
 			localStorage.setItem("user", JSON.stringify(action.payload));
+			localStorage.setItem("recipes", JSON.stringify(RecipesData));
+			localStorage.setItem("ingredients", JSON.stringify(IngredientsData));
+			localStorage.setItem(
+				"preferIngredients",
+				JSON.stringify(["Misc", "Meat"])
+			);
 			state.user = action.payload;
 		},
 		logout: (state, action: PayloadAction<void>) => {
+			localStorage.removeItem("user");
+			localStorage.removeItem("recipes");
+			localStorage.removeItem("preferIngredients");
+			localStorage.removeItem("ingredients");
 			state.user = initialState.user;
 		},
 	},

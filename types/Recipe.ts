@@ -6,6 +6,8 @@ export interface Ingredient {
 
 export interface Recipe {
 	id: number;
+	isFavourite: boolean;
+	isLiked: boolean;
 	name: string;
 	ingredients: Ingredient[];
 	steps: string[];

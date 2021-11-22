@@ -9,7 +9,7 @@ interface Props {
 const Badge = ({ content, className, bg = "bg-yellow-400" }: Props) => {
 	return (
 		<span
-			className={`${bg} ${className} px-4 py-1 rounded-full text-white font-semibold text-sm`}
+			className={`${bg} ${className} select-none px-4 py-1 rounded-full text-white font-semibold text-sm`}
 		>
 			{content}
 		</span>

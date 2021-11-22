@@ -1,6 +1,8 @@
 [
 	{
 		"id": 1,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Crock Pot Roast",
 		"ingredients": [
 			{
@@ -41,6 +43,8 @@
 	},
 	{
 		"id": 2,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Roasted Asparagus",
 		"ingredients": [
 			{
@@ -77,6 +81,8 @@
 	},
 	{
 		"id": 3,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Curried Lentils and Rice",
 		"ingredients": [
 			{
@@ -118,6 +124,8 @@
 	},
 	{
 		"id": 4,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Big Night Pizza",
 		"ingredients": [
 			{
@@ -176,6 +184,8 @@
 	},
 	{
 		"id": 5,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Cranberry and Apple Stuffed Acorn Squash Recipe",
 		"ingredients": [
 			{
@@ -225,6 +235,8 @@
 	},
 	{
 		"id": 6,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Mic's Yorkshire Puds",
 		"ingredients": [
 			{
@@ -265,6 +277,8 @@
 	},
 	{
 		"id": 7,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Old-Fashioned Oatmeal Cookies",
 		"ingredients": [
 			{
@@ -346,6 +360,8 @@
 	},
 	{
 		"id": 8,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Blueberry Oatmeal Squares",
 		"ingredients": [
 			{
@@ -415,6 +431,8 @@
 	},
 	{
 		"id": 9,
+		"isFavourite": false,
+		"isLiked": false,
 		"name": "Curried chicken salad",
 		"ingredients": [
 			{

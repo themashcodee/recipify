@@ -2,19 +2,20 @@ import type { NextPage } from "next";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "store/user";
-import { useCustomLayoutEffect } from "hooks";
+import { selectRecipes } from "store/recipes";
 import { useRouter } from "next/router";
 
 import CustomHead from "components/core/CustomHead";
 import Header from "components/core/header/Header";
 import Loading from "components/core/Loading";
 import RecipeCard from "components/mainPage/RecipeCard";
-import Recipes from "database/recipes.json";
 import SearchBar from "components/mainPage/SearchBar";
 import IngredientsBar from "components/mainPage/IngredientsBar";
+import Hero from "components/mainPage/Hero";
 
 const Home: NextPage = () => {
 	const user = useSelector(selectUser);
+	const recipes = useSelector(selectRecipes);
 	const router = useRouter();
 
 	const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);
@@ -49,6 +50,7 @@ const Home: NextPage = () => {
 
 			<main className="page py-8">
 				<Header showFavourite showProfile />
+				<Hero />
 				<SearchBar query={query} setQuery={setQuery} ref={searchInputRef} />
 				<IngredientsBar
 					selectedIngredients={selectedIngredients}
@@ -56,17 +58,19 @@ const Home: NextPage = () => {
 				/>
 
 				<section className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6 place-content-between ">
-					{Recipes.filter((recipe) => {
-						if (!query && !selectedIngredients.length) return true;
-						return selectedIngredients.length
-							? recipe.name.toLowerCase().includes(query.toLowerCase()) &&
-									selectedIngredients.every((ing) =>
-										recipe.ingredients.some((ingr) => ingr.type === ing)
-									)
-							: recipe.name.toLowerCase().includes(query.toLowerCase());
-					}).map((recipe) => (
-						<RecipeCard recipe={recipe} key={recipe.id} />
-					))}
+					{recipes
+						.filter((recipe) => {
+							if (!query && !selectedIngredients.length) return true;
+							return selectedIngredients.length
+								? recipe.name.toLowerCase().includes(query.toLowerCase()) &&
+										selectedIngredients.every((ing) =>
+											recipe.ingredients.some((ingr) => ingr.type === ing)
+										)
+								: recipe.name.toLowerCase().includes(query.toLowerCase());
+						})
+						.map((recipe) => (
+							<RecipeCard recipe={recipe} key={recipe.id} />
+						))}
 				</section>
 			</main>
 		</>
