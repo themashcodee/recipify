@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { User } from "types/User";
 
+import UserIcon from "components/icons/User";
 import Header from "components/core/header/Header";
 import Loading from "components/core/Loading";
 import CustomHead from "components/core/CustomHead";
@@ -35,13 +36,17 @@ const Profile: NextPage = () => {
 				<Header showHome showFavourite />
 
 				<section className="py-8 flex flex-col gap-6 items-center">
-					<div className="relative h-40 w-40 sm:h-48 sm:w-48 lg:h-60 lg:w-60 rounded-lg overflow-hidden">
-						<Image
-							src={user.picture}
-							layout="fill"
-							objectFit="cover"
-							alt="profile picture"
-						></Image>
+					<div className="relative h-40 w-40 sm:h-48 sm:w-48 lg:h-60 lg:w-60 rounded-lg overflow-hidden bg-white-900 dark:bg-black-800 p-4">
+						{user.picture ? (
+							<Image
+								src={user.picture}
+								layout="fill"
+								objectFit="cover"
+								alt="profile picture"
+							/>
+						) : (
+							<UserIcon />
+						)}
 					</div>
 
 					<div>

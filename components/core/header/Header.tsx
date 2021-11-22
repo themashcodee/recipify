@@ -50,12 +50,14 @@ const Header = ({
 						</span>
 						<ThemeButton />
 
-						<button
-							onClick={() => setIsNavOpen(!isNavOpen)}
-							className="flex justify-center items-center sm:hidden w-8 h-8 p-1 rounded-sm"
-						>
-							{isNavOpen ? <CancelIcon /> : <MenuIcon />}
-						</button>
+						{(showFavourite || showProfile || showHome) && (
+							<button
+								onClick={() => setIsNavOpen(!isNavOpen)}
+								className="flex justify-center items-center sm:hidden w-8 h-8 p-1 rounded-sm"
+							>
+								{isNavOpen ? <CancelIcon /> : <MenuIcon />}
+							</button>
+						)}
 					</div>
 				</nav>
 			</header>

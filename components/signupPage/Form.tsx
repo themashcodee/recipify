@@ -44,15 +44,6 @@ const Form = () => {
 	return (
 		<form onSubmit={(e) => submitForm(e)} className="flex flex-col gap-4">
 			<div className="flex flex-col gap-1 w-20 h-20 rounded-full bg-white-800 self-center relative">
-				{image && (
-					<button
-						onClick={() => setImage("")}
-						className="absolute top-0 right-0 rounded-full p-1 h-6 w-6 bg-red-400 text-white-900 z-10"
-					>
-						<Cancel />
-					</button>
-				)}
-
 				<input
 					className="w-full h-full absolute left-0 top-0 rounded-full z-0"
 					type="file"
@@ -67,13 +58,28 @@ const Form = () => {
 					className="bg-yellow-100 text-black-500 h-full w-full flex justify-center items-center rounded-full absolute left-0 top-0 overflow-hidden"
 				>
 					{image ? (
-						<Image src={image} layout="fill" alt="profile photo" />
+						<Image
+							src={image}
+							layout="fill"
+							objectFit="cover"
+							alt="profile photo"
+						/>
 					) : (
 						<span className="w-8 h-8">
 							<User />
 						</span>
 					)}
 				</label>
+
+				{image && (
+					<button
+						type="button"
+						onClick={() => setImage("")}
+						className="absolute top-0 right-0 rounded-full p-1 h-6 w-6 bg-red-400 text-white-900 z-10"
+					>
+						<Cancel />
+					</button>
+				)}
 			</div>
 
 			<label htmlFor="name" className="flex flex-col gap-1">
