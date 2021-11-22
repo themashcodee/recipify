@@ -4,25 +4,22 @@ import Loading from "components/core/Loading";
 import { useCustomLayoutEffect } from "hooks";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import { selectUser } from "store/user";
 import CustomHead from "components/core/CustomHead";
 
 const Favourite: NextPage = () => {
 	const user = useSelector(selectUser);
 	const router = useRouter();
-	const [loading, setLoading] = useState(true);
 
 	useCustomLayoutEffect(() => {
 		if (!user.username) router.replace("/signup");
-		else setLoading(false);
 	}, [user.username, router]);
 
-	if (loading) return <Loading />;
+	if (!user.username) return <Loading />;
 
 	return (
 		<>
-			<CustomHead title="Recepify | Favourite" />
+			<CustomHead title="| Favourite" />
 
 			<main className="page py-8">
 				<Header showHome showProfile />

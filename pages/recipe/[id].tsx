@@ -16,13 +16,10 @@ import AsideSection from "components/recipePage/AsideSection";
 const Recipe: NextPage = () => {
 	const user = useSelector(selectUser);
 	const router = useRouter();
-
-	const [loading, setLoading] = useState(true);
 	const [recipe, setRecipe] = useState<Recipe | null>(null);
 
 	useCustomLayoutEffect(() => {
 		if (!user.username) router.replace("/signup");
-		else setLoading(false);
 	}, [user.username, router]);
 
 	useEffect(() => {
@@ -30,11 +27,11 @@ const Recipe: NextPage = () => {
 		id && setRecipe(Recipes.find((rec) => rec.id === +id) || null);
 	}, [router]);
 
-	if (loading) return <Loading />;
+	if (!user.username) return <Loading />;
 
 	return (
 		<>
-			<CustomHead title="Recepify | Single Recipe" />
+			<CustomHead title="| Single Recipe" />
 
 			<main className="page py-8">
 				<Header showFavourite showProfile showHome />

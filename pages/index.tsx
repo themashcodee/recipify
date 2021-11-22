@@ -16,7 +16,6 @@ import IngredientsBar from "components/mainPage/IngredientsBar";
 const Home: NextPage = () => {
 	const user = useSelector(selectUser);
 	const router = useRouter();
-	const [loading, setLoading] = useState(true);
 
 	const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);
 	const [query, setQuery] = useState<string>("");
@@ -24,7 +23,6 @@ const Home: NextPage = () => {
 
 	useCustomLayoutEffect(() => {
 		if (!user.username) router.replace("/signup");
-		else setLoading(false);
 	}, [user.username, router]);
 
 	useEffect(() => {
@@ -37,11 +35,11 @@ const Home: NextPage = () => {
 		};
 	}, []);
 
-	if (loading) return <Loading />;
+	if (!user.username) return <Loading />;
 
 	return (
 		<>
-			<CustomHead title="Recepify" />
+			<CustomHead title="" />
 
 			<main className="page py-8">
 				<Header showFavourite showProfile />

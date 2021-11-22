@@ -6,7 +6,7 @@ import CustomHead from "components/core/CustomHead";
 const Signup: NextPage = () => {
 	return (
 		<>
-			<CustomHead title="Recepify | Signup" />
+			<CustomHead title="| Signup" />
 
 			<main className="page py-8">
 				<Header />
