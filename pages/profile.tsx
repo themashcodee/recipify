@@ -15,7 +15,13 @@ const Profile: NextPage = () => {
 		if (!user.username) router.replace("/signup");
 	}, [user.username, router]);
 
-	if (!user.username) return <Loading />;
+	if (!user.username)
+		return (
+			<>
+				<CustomHead title="| Profile" />
+				<Loading />
+			</>
+		);
 
 	return (
 		<>

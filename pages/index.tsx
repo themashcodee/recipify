@@ -21,9 +21,9 @@ const Home: NextPage = () => {
 	const [query, setQuery] = useState<string>("");
 	const searchInputRef = useRef<HTMLInputElement | null>(null);
 
-	useCustomLayoutEffect(() => {
+	useEffect(() => {
 		if (!user.username) router.replace("/signup");
-	}, [user.username, router]);
+	}, [user, router]);
 
 	useEffect(() => {
 		function focusOnSearch(this: Window, e: globalThis.KeyboardEvent): any {
@@ -35,7 +35,13 @@ const Home: NextPage = () => {
 		};
 	}, []);
 
-	if (!user.username) return <Loading />;
+	if (!user.username)
+		return (
+			<>
+				<CustomHead title="" />
+				<Loading />
+			</>
+		);
 
 	return (
 		<>

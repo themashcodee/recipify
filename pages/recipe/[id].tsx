@@ -27,7 +27,13 @@ const Recipe: NextPage = () => {
 		id && setRecipe(Recipes.find((rec) => rec.id === +id) || null);
 	}, [router]);
 
-	if (!user.username) return <Loading />;
+	if (!user.username)
+		return (
+			<>
+				<CustomHead title="| Single Recipe" />
+				<Loading />
+			</>
+		);
 
 	return (
 		<>
