@@ -23,44 +23,38 @@ export const recipesSlice = createSlice({
 			state,
 			action: PayloadAction<{ id: number; comment: string }>
 		) => {
-			const newState = state.recipes.map((recipe) => {
-				if (recipe.id === action.payload.id) {
-					return {
-						...recipe,
-						comments: [...recipe.comments, action.payload.comment],
-					};
-				}
-				return recipe;
-			});
-			localStorage.setItem("recipes", JSON.stringify(newState));
-			state.recipes = newState;
+			const recipeIndex = state.recipes.findIndex(
+				(recipe) => recipe.id === action.payload.id
+			);
+			const recipe = state.recipes[recipeIndex];
+			state.recipes[recipeIndex] = {
+				...recipe,
+				comments: [...recipe.comments, action.payload.comment],
+			};
+			localStorage.setItem("recipes", JSON.stringify(state.recipes));
 		},
 		likeDislike: (state, action: PayloadAction<{ id: number }>) => {
-			const newState = state.recipes.map((recipe) => {
-				if (recipe.id === action.payload.id) {
-					return {
-						...recipe,
-						likes: recipe.isLiked ? recipe.likes - 1 : recipe.likes + 1,
-						isLiked: !recipe.isLiked,
-					};
-				}
-				return recipe;
-			});
-			localStorage.setItem("recipes", JSON.stringify(newState));
-			state.recipes = newState;
+			const recipeIndex = state.recipes.findIndex(
+				(recipe) => recipe.id === action.payload.id
+			);
+			const recipe = state.recipes[recipeIndex];
+			state.recipes[recipeIndex] = {
+				...recipe,
+				likes: recipe.isLiked ? recipe.likes - 1 : recipe.likes + 1,
+				isLiked: !recipe.isLiked,
+			};
+			localStorage.setItem("recipes", JSON.stringify(state.recipes));
 		},
 		favouriteToggle: (state, action: PayloadAction<{ id: number }>) => {
-			const newState = state.recipes.map((recipe) => {
-				if (recipe.id === action.payload.id) {
-					return {
-						...recipe,
-						isFavourite: !recipe.isFavourite,
-					};
-				}
-				return recipe;
-			});
-			localStorage.setItem("recipes", JSON.stringify(newState));
-			state.recipes = newState;
+			const recipeIndex = state.recipes.findIndex(
+				(recipe) => recipe.id === action.payload.id
+			);
+			const recipe = state.recipes[recipeIndex];
+			state.recipes[recipeIndex] = {
+				...recipe,
+				isFavourite: !recipe.isFavourite,
+			};
+			localStorage.setItem("recipes", JSON.stringify(state.recipes));
 		},
 		addRecipe: (state, action: PayloadAction<RecipePayload>) => {
 			const newState = [
