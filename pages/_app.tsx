@@ -1,11 +1,12 @@
-import React, { ReactElement } from "react";
 import "../styles/globals.css";
-import { useCustomLayoutEffect } from "hooks";
 import type { AppProps } from "next/app";
+import React, { ReactElement } from "react";
 import { Provider } from "react-redux";
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+
+import { useCustomLayoutEffect } from "hooks";
 import { store } from "store";
 import { initTheme } from "helpers";
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import Toast from "components/core/Toast";
 
 function SafeHydrate({ children }: { children: ReactElement }) {

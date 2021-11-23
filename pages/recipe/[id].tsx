@@ -19,12 +19,15 @@ const Recipe: NextPage = () => {
 	const router = useRouter();
 	const recipes = useSelector(selectRecipes);
 	const dispatch = useDispatch();
+
 	const [recipe, setRecipe] = useState<Recipe | null>(null);
 
+	// REDIRECT IF WE USER DOES NOT EXIST
 	useEffect(() => {
 		if (!user.username) router.replace("/signup");
 	}, [user.username, router]);
 
+	// CHANGE PREFER INGREDIENTS TO CURRENT RECIPE INGREDIENTS FOR RECIPE SUGGESTION IN HERO SECTION
 	useEffect(() => {
 		if (recipe) {
 			dispatch(
@@ -33,18 +36,21 @@ const Recipe: NextPage = () => {
 		}
 	}, [recipe, dispatch]);
 
+	// SETTING RECIPE ACCORDING TO THE RECIPE ID TAKEN FROM URL PATH QUERY
 	useEffect(() => {
 		const { id } = router.query;
 		id && setRecipe(recipes.find((rec) => rec.id === +id) || null);
 	}, [router, recipes]);
 
-	if (!user.username)
+	// WAIT FOR REDIRECT IF USER DOES NOT EXIST
+	if (!user.username) {
 		return (
 			<>
 				<CustomHead title="" />
 				<Loading />
 			</>
 		);
+	}
 
 	return (
 		<>

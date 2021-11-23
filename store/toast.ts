@@ -1,16 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "store";
+import { Toast } from "types";
+
+const initialState: { toast: Toast } = {
+	toast: { text: "", timeout: 0 },
+};
 
 export const toastSlice = createSlice({
 	name: "toast",
-	initialState: {
-		toast: { text: "", timeout: 0 } as {
-			text: string;
-			bg?: string;
-			color?: string;
-			timeout: number;
-		},
-	},
+	initialState,
 	reducers: {
 		popUpToast: (
 			state,

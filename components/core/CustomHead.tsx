@@ -2,10 +2,10 @@ import React from "react";
 import Head from "next/head";
 
 interface Props {
-	title: string;
+	title?: string;
 }
 
-const CustomHead = ({ title }: Props) => {
+const CustomHead = ({ title = "" }: Props) => {
 	return (
 		<Head>
 			<title>{`Recipify ${title}`}</title>

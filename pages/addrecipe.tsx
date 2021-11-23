@@ -1,30 +1,33 @@
-import type { NextPage } from "next";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "store/user";
+import type { NextPage } from "next";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
+
+import { selectUser } from "store/user";
 
 import CustomHead from "components/core/CustomHead";
 import Header from "components/core/header/Header";
 import Loading from "components/core/Loading";
 import Form from "components/addRecipePage/Form";
-import Toast from "components/core/Toast";
 
 const AddRecipe: NextPage = () => {
 	const user = useSelector(selectUser);
 	const router = useRouter();
 
+	// REDIRECT IF WE USER DOES NOT EXIST
 	useEffect(() => {
 		if (!user.username) router.replace("/signup");
 	}, [user, router]);
 
-	if (!user.username)
+	// WAIT FOR REDIRECT IF USER DOES NOT EXIST
+	if (!user.username) {
 		return (
 			<>
 				<CustomHead title="| Add a Recipe" />
 				<Loading />
 			</>
 		);
+	}
 
 	return (
 		<>

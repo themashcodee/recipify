@@ -1,10 +1,11 @@
-import type { NextPage } from "next";
-import { useSelector, useDispatch } from "react-redux";
-import { selectUser, logout } from "store/user";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
+import type { NextPage } from "next";
+import { useRouter } from "next/router";
 import Image from "next/image";
+import { useSelector, useDispatch } from "react-redux";
+
 import { User } from "types/User";
+import { selectUser, logout } from "store/user";
 
 import UserIcon from "components/icons/User";
 import Header from "components/core/header/Header";
@@ -16,17 +17,20 @@ const Profile: NextPage = () => {
 	const dispatch = useDispatch();
 	const router = useRouter();
 
+	// REDIRECT IF WE USER DOES NOT EXIST
 	useEffect(() => {
 		if (!user.username) router.replace("/signup");
 	}, [user.username, router]);
 
-	if (!user.username)
+	// WAIT FOR REDIRECT IF USER DOES NOT EXIST
+	if (!user.username) {
 		return (
 			<>
 				<CustomHead title="| Profile" />
 				<Loading />
 			</>
 		);
+	}
 
 	return (
 		<>

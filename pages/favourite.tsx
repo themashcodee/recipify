@@ -1,7 +1,8 @@
-import type { NextPage } from "next";
-import { useSelector } from "react-redux";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
+import type { NextPage } from "next";
+import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
+
 import { selectRecipes } from "store/recipes";
 import { selectUser } from "store/user";
 
@@ -15,17 +16,20 @@ const Favourite: NextPage = () => {
 	const recipes = useSelector(selectRecipes);
 	const router = useRouter();
 
+	// REDIRECT IF WE USER DOES NOT EXIST
 	useEffect(() => {
 		if (!user.username) router.replace("/signup");
 	}, [user.username, router]);
 
-	if (!user.username)
+	// WAIT FOR REDIRECT IF USER DOES NOT EXIST
+	if (!user.username) {
 		return (
 			<>
 				<CustomHead title="| Favourite" />
 				<Loading />
 			</>
 		);
+	}
 
 	return (
 		<>
