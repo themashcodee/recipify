@@ -1,3 +1,5 @@
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 # Recipe App
 
 A Recipe application (only frontend as of now)
@@ -37,16 +39,29 @@ Favicon - <span>made by <a href="https://www.freepik.com" title="Freepik">Freepi
 ## Sneak Peek (Screenshot)
 
 ### Homepage - Desktop
+
 ![homepage-desktoop](https://user-images.githubusercontent.com/50915748/142982028-b0528afe-bf15-465c-9cd8-8a79251dc956.png)
+
 ### Homepage - Mobile
+
 ![homepage-mobile](https://user-images.githubusercontent.com/50915748/142982034-3e23359e-c814-4200-83a6-623daa9a75a4.png)
+
 ### Signup Page - Desktop
+
 ![signup](https://user-images.githubusercontent.com/50915748/142982038-ec777eab-5e26-45ef-820e-53da52724551.png)
+
 ### Single Recipe Page - Desktop
+
 ![singlerecipe](https://user-images.githubusercontent.com/50915748/142982039-a01bd13c-0b85-455c-a3c6-b7d6e046697e.png)
+
 ### Single Recipe Page - Desktop
+
 ![singlerecipe-dark](https://user-images.githubusercontent.com/50915748/142982041-ee122c5a-b35a-4030-a3aa-d2e3a14f495f.png)
+
 ### Add Recipe Page - Desktop
+
 ![addrecipe](https://user-images.githubusercontent.com/50915748/142982046-399d9fb0-e5a1-4f41-a38c-97f1268f05d6.png)
+
 ### Favourite Recipes Page - Desktop
+
 ![favorite](https://user-images.githubusercontent.com/50915748/142982047-4925289b-88a0-49d8-9b2c-d632fe7e6dce.png)

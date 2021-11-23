@@ -15,16 +15,13 @@ const FormSteps = ({ setSteps }: Props) => {
 
 	return (
 		<form onSubmit={(e) => addIngredient(e)} className="flex flex-col gap-2">
-			<input
-				type="text"
+			<textarea
 				value={step}
 				onChange={(e) => setStep(e.currentTarget.value)}
-				maxLength={255}
 				minLength={3}
 				required
-				placeholder="Step"
-				className="h-12 rounded bg-white-800 dark:bg-black-700 px-4"
-			/>
+				className="h-40 rounded bg-white-800 dark:bg-black-700 p-4 resize-none"
+			></textarea>
 			<button
 				type="submit"
 				className="h-12 rounded bg-green-500 text-white-900 px-4"
