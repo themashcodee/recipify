@@ -38,7 +38,7 @@ const FormIngredients = ({ setIngredients }: Props) => {
 				value={quantity}
 				onChange={(e) => setQuantity(e.currentTarget.value)}
 				maxLength={50}
-				minLength={3}
+				minLength={1}
 				required
 				placeholder="Ingredient quantity"
 				className="h-12 rounded bg-white-800 dark:bg-black-700 px-4"
