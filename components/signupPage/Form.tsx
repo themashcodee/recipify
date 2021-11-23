@@ -45,7 +45,7 @@ const Form = () => {
 		<form onSubmit={(e) => submitForm(e)} className="flex flex-col gap-4">
 			<div className="flex flex-col gap-1 w-20 h-20 rounded-full bg-white-800 self-center relative">
 				<input
-					className="w-full h-full absolute left-0 top-0 rounded-full z-0"
+					className="w-full h-full absolute left-0 top-0 rounded-full z-0 opacity-0 focus:opacity-100"
 					type="file"
 					id="profileimage"
 					accept="image/*"
