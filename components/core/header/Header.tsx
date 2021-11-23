@@ -12,12 +12,14 @@ interface Props {
 	showFavourite?: boolean;
 	showHome?: boolean;
 	showProfile?: boolean;
+	showAddRecipe?: boolean;
 }
 
 const Header = ({
 	showFavourite = false,
 	showHome = false,
 	showProfile = false,
+	showAddRecipe = false,
 }: Props) => {
 	const user: User = useSelector(selectUser);
 	const [isNavOpen, setIsNavOpen] = useState(false);
@@ -26,7 +28,7 @@ const Header = ({
 		<>
 			<header className="flex justify-between mb-8 w-full items-center">
 				<h2 className="text-3xl font-semibold select-none">
-					<Link href="/">Recepify.</Link>
+					<Link href="/">Recipify.</Link>
 				</h2>
 
 				{/* DESKTOP AND TABLET NAVBAR */}
@@ -35,6 +37,11 @@ const Header = ({
 						{showHome && (
 							<li>
 								<Link href="/">Home</Link>
+							</li>
+						)}
+						{showAddRecipe && (
+							<li>
+								<Link href="/addrecipe">Add Recipe</Link>
 							</li>
 						)}
 						{showFavourite && (
@@ -50,7 +57,7 @@ const Header = ({
 						</span>
 						<ThemeButton />
 
-						{(showFavourite || showProfile || showHome) && (
+						{(showFavourite || showProfile || showHome || showAddRecipe) && (
 							<button
 								onClick={() => setIsNavOpen(!isNavOpen)}
 								className="flex justify-center items-center sm:hidden w-8 h-8 p-1 rounded-sm"
@@ -67,19 +74,24 @@ const Header = ({
 				<nav className="block sm:hidden mb-8 bg-white-900 dark:bg-black-800 rounded-lg p-4">
 					<ul className="flex flex-col gap-2">
 						{showHome && (
-							<li>
-								<Link href="/">Home</Link>
-							</li>
+							<Link href="/" passHref>
+								<li>Home</li>
+							</Link>
+						)}
+						{showAddRecipe && (
+							<Link href="/addrecipe" passHref>
+								<li>Add Recipe</li>
+							</Link>
 						)}
 						{showFavourite && (
-							<li>
-								<Link href="/favourite">Favourite</Link>
-							</li>
+							<Link href="/favourite" passHref>
+								<li>Favourite</li>
+							</Link>
 						)}
 						{showProfile && (
-							<li>
-								<Link href="/profile">Profile</Link>
-							</li>
+							<Link href="/profile" passHref>
+								<li>Profile</li>
+							</Link>
 						)}
 					</ul>
 				</nav>

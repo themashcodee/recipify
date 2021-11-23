@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "store";
-import { Recipe } from "types";
 
 function getpreferIngredientsFromLocalStorage(): string[] | null {
 	if (typeof window !== "undefined") {
@@ -14,15 +13,15 @@ export const preferIngredientsSlice = createSlice({
 	name: "preferIngredients",
 	initialState: {
 		preferIngredients: getpreferIngredientsFromLocalStorage() || [
-			"Misc",
-			"Meat",
+			"misc",
+			"meat",
 		],
 	},
 	reducers: {
 		addPreferIngredientsInitialy: (state, action: PayloadAction<void>) => {
 			state.preferIngredients = getpreferIngredientsFromLocalStorage() || [
-				"Misc",
-				"Meat",
+				"misc",
+				"meat",
 			];
 		},
 		changePreferIngredients: (state, action: PayloadAction<string[]>) => {

@@ -31,7 +31,7 @@ export const userSlice = createSlice({
 			localStorage.setItem("ingredients", JSON.stringify(IngredientsData));
 			localStorage.setItem(
 				"preferIngredients",
-				JSON.stringify(["Misc", "Meat"])
+				JSON.stringify(["misc", "meat"])
 			);
 			state.user = action.payload;
 		},

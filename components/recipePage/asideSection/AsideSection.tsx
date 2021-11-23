@@ -30,29 +30,27 @@ const AsideSection = ({ recipe }: Props) => {
 					<span className="w-7 h-7">
 						<Comment />
 					</span>
-					<span>{`${recipe?.comments.length}`}</span>
+					{recipe && recipe.comments && (
+						<span>{`${recipe.comments.length}`}</span>
+					)}
 				</span>
 
 				{/* Comments */}
-				<section className="w-full flex flex-col gap-1">
-					<ul className="w-full flex rounded-lg p-3 gap-2 flex-col bg-white-900 dark:bg-black-800 border border-white-500 dark:border-black-500">
-						{recipe?.comments.map((comment, i) => {
-							return (
-								<li key={i} className="text-lg">
-									{comment}
-								</li>
-							);
-						})}
-					</ul>
-				</section>
+				{recipe && recipe.comments.length ? (
+					<section className="w-full flex flex-col gap-1">
+						<ul className="w-full flex rounded-lg p-3 gap-2 flex-col bg-white-900 dark:bg-black-800 border border-white-500 dark:border-black-500">
+							{recipe.comments.map((comment, i) => {
+								return (
+									<li key={i} className="text-lg">
+										{comment}
+									</li>
+								);
+							})}
+						</ul>
+					</section>
+				) : null}
 
 				<AddComment id={recipe?.id || null} />
-
-				<Link href="/addrecipe" passHref>
-					<button className="w-full h-12 bg-green-500 text-white font-semibold rounded-lg">
-						Add your Recipe
-					</button>
-				</Link>
 			</div>
 		</aside>
 	);

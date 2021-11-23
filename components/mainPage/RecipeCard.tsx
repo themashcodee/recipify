@@ -3,6 +3,7 @@ import { Recipe } from "types";
 import Image from "next/image";
 import Link from "next/link";
 import Badge from "components/core/Badge";
+import { motion } from "framer-motion";
 
 interface Props {
 	recipe: Recipe;

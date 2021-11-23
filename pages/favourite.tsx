@@ -32,7 +32,7 @@ const Favourite: NextPage = () => {
 			<CustomHead title="| Favourite" />
 
 			<main className="page py-8">
-				<Header showHome showProfile />
+				<Header showHome showProfile showAddRecipe />
 				<section className="flex flex-col py-8 gap-10">
 					<h1 className="text-4xl font-semibold">Your Favourite Recipes</h1>
 					<div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6 place-content-between">

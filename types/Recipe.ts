@@ -4,6 +4,13 @@ export interface Ingredient {
 	type: string;
 }
 
+export interface RecipePayload {
+	name: string;
+	ingredients: Ingredient[];
+	steps: string[];
+	image: string;
+}
+
 export interface Recipe {
 	id: number;
 	isFavourite: boolean;

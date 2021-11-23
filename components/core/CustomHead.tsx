@@ -8,7 +8,7 @@ interface Props {
 const CustomHead = ({ title }: Props) => {
 	return (
 		<Head>
-			<title>{`Recepify ${title}`}</title>
+			<title>{`Recipify ${title}`}</title>
 			<meta name="description" content="Recepify - A Recipe application" />
 			<link rel="icon" href="/favicon.png" />
 		</Head>

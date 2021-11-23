@@ -33,7 +33,7 @@ const Profile: NextPage = () => {
 			<CustomHead title="| Profile" />
 
 			<main className="page py-8">
-				<Header showHome showFavourite />
+				<Header showHome showFavourite showAddRecipe />
 
 				<section className="py-8 flex flex-col gap-6 items-center">
 					<div className="relative h-40 w-40 sm:h-48 sm:w-48 lg:h-60 lg:w-60 rounded-lg overflow-hidden bg-white-900 dark:bg-black-800 p-4">

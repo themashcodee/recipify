@@ -75,7 +75,7 @@ const Form = () => {
 					<button
 						type="button"
 						onClick={() => setImage("")}
-						className="absolute top-0 right-0 rounded-full p-1 h-6 w-6 bg-red-400 text-white-900 z-10"
+						className="absolute top-0 right-0 rounded-full p-1 h-6 w-6 bg-red-500 text-white-900 z-10"
 					>
 						<Cancel />
 					</button>

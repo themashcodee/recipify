@@ -12,6 +12,7 @@ import ArticleSection from "components/recipePage/ArticleSection";
 import AsideSection from "components/recipePage/asideSection/AsideSection";
 import { selectRecipes } from "store/recipes";
 import { changePreferIngredients } from "store/preferIngredients";
+import Toast from "components/core/Toast";
 
 const Recipe: NextPage = () => {
 	const user = useSelector(selectUser);
@@ -40,17 +41,17 @@ const Recipe: NextPage = () => {
 	if (!user.username)
 		return (
 			<>
-				<CustomHead title="| Single Recipe" />
+				<CustomHead title="" />
 				<Loading />
 			</>
 		);
 
 	return (
 		<>
-			<CustomHead title="| Single Recipe" />
+			<CustomHead title={`| ${recipe?.name}`} />
 
 			<main className="page py-8">
-				<Header showFavourite showProfile showHome />
+				<Header showFavourite showProfile showHome showAddRecipe />
 
 				<section className="flex lg:flex-row flex-col py-8 gap-20">
 					<ArticleSection recipe={recipe} />

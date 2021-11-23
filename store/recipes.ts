@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "store";
-import { Recipe } from "types";
+import { Recipe, RecipePayload } from "types";
 
 function getRecipesFromLocalStorage(): Recipe[] | null {
 	if (typeof window !== "undefined") {
@@ -62,10 +62,30 @@ export const recipesSlice = createSlice({
 			localStorage.setItem("recipes", JSON.stringify(newState));
 			state.recipes = newState;
 		},
+		addRecipe: (state, action: PayloadAction<RecipePayload>) => {
+			const newState = [
+				...state.recipes,
+				{
+					...action.payload,
+					isFavourite: false,
+					isLiked: false,
+					likes: 0,
+					comments: [],
+					id: state.recipes[state.recipes.length - 1].id + 1,
+				},
+			];
+			localStorage.setItem("recipes", JSON.stringify(newState));
+			state.recipes = newState;
+		},
 	},
 });
 
 export const recipesReducer = recipesSlice.reducer;
-export const { addComment, addRecipesInitialy, likeDislike, favouriteToggle } =
-	recipesSlice.actions;
+export const {
+	addComment,
+	addRecipesInitialy,
+	likeDislike,
+	favouriteToggle,
+	addRecipe,
+} = recipesSlice.actions;
 export const selectRecipes = (state: RootState) => state.recipes.recipes;

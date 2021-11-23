@@ -30,7 +30,7 @@ const Hero = (props: Props) => {
 
 	return (
 		<section className="w-full flex flex-col md:flex-row gap-8 p-6 rounded-xl bg-white-900 dark:bg-black-800 mb-8">
-			<div className="w-full h-80 flex-grow bg-white-800 dark:bg-black-700 rounded-lg overflow-hidden relative">
+			<div className="w-full min-h-[320px] flex-grow bg-white-800 dark:bg-black-700 rounded-lg overflow-hidden relative">
 				{recipe && (
 					<Image
 						src={recipe.image}

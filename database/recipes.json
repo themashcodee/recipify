@@ -8,27 +8,27 @@
 			{
 				"quantity": "1",
 				"name": " beef roast",
-				"type": "Meat"
+				"type": "meat"
 			},
 			{
 				"quantity": "1 package",
 				"name": "brown gravy mix",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1 package",
 				"name": "dried Italian salad dressing mix",
-				"type": "Condiments"
+				"type": "condiments"
 			},
 			{
 				"quantity": "1 package",
 				"name": "dry ranch dressing mix",
-				"type": "Condiments"
+				"type": "condiments"
 			},
 			{
 				"quantity": "1/2 cup",
 				"name": "water",
-				"type": "Drinks"
+				"type": "drinks"
 			}
 		],
 		"steps": [
@@ -50,17 +50,17 @@
 			{
 				"quantity": "1 lb",
 				"name": " asparagus",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1 1/2 tbsp",
 				"name": "olive oil",
-				"type": "Condiments"
+				"type": "condiments"
 			},
 			{
 				"quantity": "1/2 tsp",
 				"name": "kosher salt",
-				"type": "Baking"
+				"type": "baking"
 			}
 		],
 		"steps": [
@@ -88,27 +88,27 @@
 			{
 				"quantity": "1 quart",
 				"name": "beef broth",
-				"type": "Misc"
+				"type": "misc"
 			},
 			{
 				"quantity": "1 cup",
 				"name": "dried green lentils",
-				"type": "Misc"
+				"type": "misc"
 			},
 			{
 				"quantity": "1/2 cup",
 				"name": "basmati rice",
-				"type": "Misc"
+				"type": "misc"
 			},
 			{
 				"quantity": "1 tsp",
 				"name": "curry powder",
-				"type": "Condiments"
+				"type": "condiments"
 			},
 			{
 				"quantity": "1 tsp",
 				"name": "salt",
-				"type": "Condiments"
+				"type": "condiments"
 			}
 		],
 		"steps": [
@@ -131,42 +131,42 @@
 			{
 				"quantity": "5 teaspoons",
 				"name": "yeast",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "5 cups",
 				"name": "flour",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "4 tablespoons",
 				"name": "vegetable oil",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "2 tablespoons",
 				"name": "sugar",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "2 teaspoons",
 				"name": "salt",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "2 cups",
 				"name": "hot water",
-				"type": "Misc"
+				"type": "misc"
 			},
 			{
 				"quantity": "1/4 cup",
 				"name": "pizza sauce",
-				"type": "Misc"
+				"type": "misc"
 			},
 			{
 				"quantity": "3/4 cup",
 				"name": "mozzarella cheese",
-				"type": "Dairy"
+				"type": "dairy"
 			}
 		],
 		"steps": [
@@ -191,32 +191,32 @@
 			{
 				"quantity": "2",
 				"name": "acorn squash",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1",
 				"name": "boiling water",
-				"type": "Drinks"
+				"type": "drinks"
 			},
 			{
 				"quantity": "2",
 				"name": "apples chopped into 1.4 inch pieces",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1/2 cup",
 				"name": "dried cranberries",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1 teaspoon",
 				"name": "cinnamon",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "2 tablespoons",
 				"name": "melted butter",
-				"type": "Dairy"
+				"type": "dairy"
 			}
 		],
 		"steps": [
@@ -242,22 +242,22 @@
 			{
 				"quantity": "200g",
 				"name": "plain flour",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "3",
 				"name": "eggs",
-				"type": "Dairy"
+				"type": "dairy"
 			},
 			{
 				"quantity": "300ml",
 				"name": "milk",
-				"type": "Dairy"
+				"type": "dairy"
 			},
 			{
 				"quantity": "3 tbsp",
 				"name": "vegetable oil",
-				"type": "Condiments"
+				"type": "condiments"
 			}
 		],
 		"steps": [
@@ -284,62 +284,62 @@
 			{
 				"quantity": "1 cup",
 				"name": "raisins",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1",
 				"name": "cup water",
-				"type": "Drinks"
+				"type": "drinks"
 			},
 			{
 				"quantity": "3/4 cup",
 				"name": "shortening",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1 1/2 cups",
 				"name": "sugar",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "2 1/2 cups",
 				"name": "flour",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1 tsp.",
 				"name": "soda",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1 tsp.",
 				"name": "salt",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1 tsp.",
 				"name": "cinnamon",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1/2 tsp.",
 				"name": "baking powder",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1/2 tsp.",
 				"name": "cloves",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "2 cups",
 				"name": "oats",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1/2 cup",
 				"name": "chopped nuts",
-				"type": "Baking"
+				"type": "baking"
 			}
 		],
 		"steps": [
@@ -367,52 +367,52 @@
 			{
 				"quantity": "2-1/2 cups",
 				"name": "rolled oats, (not instant)",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1-1/4 cups",
 				"name": "all-purpose flour",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1 tbsp",
 				"name": "grated orange rind",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1/4 tsp",
 				"name": "salt",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1 cup",
 				"name": "cold butter, cubed",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "3/4 cup",
 				"name": "packed brown sugar",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "3 cups",
 				"name": "fresh blueberries",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1/2 cup",
 				"name": "granulated sugar",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1/3 cup",
 				"name": "orange juice",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "4 tsp",
 				"name": "cornstarch",
-				"type": "Baking"
+				"type": "baking"
 			}
 		],
 		"steps": [
@@ -438,62 +438,62 @@
 			{
 				"quantity": "3",
 				"name": "skinless, boneless chicken breasts, halved lengthwise",
-				"type": "Meat"
+				"type": "meat"
 			},
 			{
 				"quantity": "1/2 cup",
 				"name": "mayonnaise",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1 tbsp",
 				"name": "lemon zest",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1 tbsp ",
 				"name": "lemon juice",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1 1/2 tsp",
 				"name": "curry powder",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "1/4 tsp",
 				"name": "salt",
-				"type": "Baking"
+				"type": "baking"
 			},
 			{
 				"quantity": "2",
 				"name": "ripe mangoes, diced",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1/4 cup",
 				"name": "dried cranberries",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "2",
 				"name": "green onions, thinly sliced",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "1",
 				"name": "celery stalk, finely chopped",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "6 leaves",
 				"name": "Boston lettuce",
-				"type": "Produce"
+				"type": "produce"
 			},
 			{
 				"quantity": "6",
 				"name": "English muffins, toasted",
-				"type": "Misc"
+				"type": "misc"
 			}
 		],
 		"steps": [

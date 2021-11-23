@@ -12,6 +12,7 @@ import RecipeCard from "components/mainPage/RecipeCard";
 import SearchBar from "components/mainPage/SearchBar";
 import IngredientsBar from "components/mainPage/IngredientsBar";
 import Hero from "components/mainPage/Hero";
+import Toast from "components/core/Toast";
 
 const Home: NextPage = () => {
 	const user = useSelector(selectUser);
@@ -49,7 +50,7 @@ const Home: NextPage = () => {
 			<CustomHead title="" />
 
 			<main className="page py-8">
-				<Header showFavourite showProfile />
+				<Header showFavourite showProfile showAddRecipe />
 				<Hero />
 				<SearchBar query={query} setQuery={setQuery} ref={searchInputRef} />
 				<IngredientsBar

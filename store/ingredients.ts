@@ -19,10 +19,18 @@ export const IngredientsSlice = createSlice({
 		addIngredientsInitialy: (state, action: PayloadAction<void>) => {
 			state.ingredients = getIngredientsFromLocalStorage() || IngredientsData;
 		},
+		addIngredients: (state, action: PayloadAction<string[]>) => {
+			const newState = Array.from(
+				new Set([...state.ingredients, ...action.payload])
+			);
+			localStorage.setItem("ingredients", JSON.stringify(newState));
+			state.ingredients = newState;
+		},
 	},
 });
 
 export const ingredientsReducer = IngredientsSlice.reducer;
-export const { addIngredientsInitialy } = IngredientsSlice.actions;
+export const { addIngredientsInitialy, addIngredients } =
+	IngredientsSlice.actions;
 export const selectIngredients = (state: RootState) =>
 	state.ingredients.ingredients;
